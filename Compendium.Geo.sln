@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2CF896BE-6A9F-40ED-9C00-BED938B60813}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compendium.Abstractions.Geo", "src\Compendium.Abstractions.Geo\Compendium.Abstractions.Geo.csproj", "{C8573183-B976-4330-8785-4BD7632667A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compendium.Adapters.GoogleMaps", "src\Compendium.Adapters.GoogleMaps\Compendium.Adapters.GoogleMaps.csproj", "{7F7D0D28-1AFD-4DC4-9AFB-28BA616FB03A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C062D5AE-9146-40BB-837E-D391164EA1E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compendium.Adapters.GoogleMaps.Tests", "tests\Compendium.Adapters.GoogleMaps.Tests\Compendium.Adapters.GoogleMaps.Tests.csproj", "{6FE98279-B799-43F7-B23A-B230C8C621BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8573183-B976-4330-8785-4BD7632667A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8573183-B976-4330-8785-4BD7632667A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8573183-B976-4330-8785-4BD7632667A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8573183-B976-4330-8785-4BD7632667A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F7D0D28-1AFD-4DC4-9AFB-28BA616FB03A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F7D0D28-1AFD-4DC4-9AFB-28BA616FB03A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F7D0D28-1AFD-4DC4-9AFB-28BA616FB03A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F7D0D28-1AFD-4DC4-9AFB-28BA616FB03A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE98279-B799-43F7-B23A-B230C8C621BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE98279-B799-43F7-B23A-B230C8C621BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE98279-B799-43F7-B23A-B230C8C621BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE98279-B799-43F7-B23A-B230C8C621BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C8573183-B976-4330-8785-4BD7632667A2} = {2CF896BE-6A9F-40ED-9C00-BED938B60813}
+		{7F7D0D28-1AFD-4DC4-9AFB-28BA616FB03A} = {2CF896BE-6A9F-40ED-9C00-BED938B60813}
+		{6FE98279-B799-43F7-B23A-B230C8C621BB} = {C062D5AE-9146-40BB-837E-D391164EA1E9}
+	EndGlobalSection
+EndGlobal

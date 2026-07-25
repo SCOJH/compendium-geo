@@ -1,0 +1,40 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
+  <!-- Compendium framework base packages — published on nuget.org.
+       Compendium.Abstractions.Geo is NOT pinned here: it lives in this repo
+       (src/Compendium.Abstractions.Geo) and is consumed via ProjectReference. -->
+  <ItemGroup>
+    <PackageVersion Include="Compendium.Core" Version="1.0.5-preview.1" />
+    <PackageVersion Include="Compendium.Abstractions" Version="1.0.5-preview.1" />
+    <PackageVersion Include="Compendium.Multitenancy" Version="1.0.5-preview.1" />
+    <PackageVersion Include="Compendium.Testing" Version="1.0.5-preview.1" />
+  </ItemGroup>
+
+  <!-- Build-time tooling -->
+  <ItemGroup>
+    <PackageVersion Include="MinVer" Version="6.0.0" />
+  </ItemGroup>
+
+  <!-- Production runtime -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="9.0.16" />
+    <PackageVersion Include="Microsoft.Extensions.Options" Version="9.0.16" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.16" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.16" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.16" />
+    <PackageVersion Include="System.Text.Json" Version="9.0.0" />
+  </ItemGroup>
+
+  <!-- Test stack -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.4.0" />
+    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+    <PackageVersion Include="FluentAssertions" Version="6.12.1" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+  </ItemGroup>
+</Project>
