@@ -8,7 +8,7 @@ using System.Net;
 using System.Text;
 using Compendium.Abstractions.Geo.Models;
 using Compendium.Adapters.GoogleMaps;
-using FluentAssertions;
+using AwesomeAssertions;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
 using Xunit;
