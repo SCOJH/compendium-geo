@@ -19,14 +19,29 @@
     <PackageVersion Include="MinVer" Version="6.0.0" />
   </ItemGroup>
 
-  <!-- Production runtime -->
-  <ItemGroup>
+  <!-- Production runtime.
+
+       NET10-01: one line per target for the Microsoft.Extensions.* family, which is
+       versioned with the runtime. The net9.0 line is the 9.0.x set consumers already
+       run against; it does not move. net10.0 cannot share it: packages built for
+       .NET 10 ask for Microsoft.Extensions.* >= 10.0.0 in their net10.0 dependency
+       group, and a central 9.0.x pin would then be a package downgrade (NU1605, an
+       error here). System.Text.Json is no longer pinned: it comes from the shared
+       framework on both targets, and the .NET 10 SDK flags a reference to it as
+       redundant (NU1510). -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
     <PackageVersion Include="Microsoft.Extensions.Http" Version="9.0.16" />
     <PackageVersion Include="Microsoft.Extensions.Options" Version="9.0.16" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.16" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.16" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.16" />
-    <PackageVersion Include="System.Text.Json" Version="9.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.13" />
+    <PackageVersion Include="Microsoft.Extensions.Options" Version="10.0.13" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.13" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.13" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.13" />
   </ItemGroup>
 
   <!-- Test stack -->
