@@ -37,7 +37,9 @@ dotnet build -c Release
 dotnet test -c Release --filter "FullyQualifiedName!~IntegrationTests"
 ```
 
-- .NET 9 / C# 13, `TreatWarningsAsErrors`, central package management.
+- Targets `net9.0` and `net10.0` (both until .NET 9 leaves support on 2026-11-10), C# 13,
+  `TreatWarningsAsErrors`, central package management. Building needs the .NET 10 SDK
+  (`global.json`); running the `net9.0` half of the tests also needs the .NET 9 runtime.
 - Versioning: MinVer from git tags (`v*`). Release tags publish to GitHub Packages
   (primary) and nuget.org (when `NUGET_API_KEY` is configured).
 - Version train: `1.1.x` (above the framework's `1.0.x` so domain-repo packages win resolution).
